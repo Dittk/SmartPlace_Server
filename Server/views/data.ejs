@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% var a=[]; 
+    for(i=0; i < list.length; i++) { 
+        var product={ 
+            id: list[i].id, 
+            url: list[i].url, 
+            brand_name: list[i].brand_name, 
+            product_name: list[i].product_name, 
+            price: list[i].price,
+            details: list[i].details,
+            url2: list[i].url2,
+            url3: list[i].url3,
+            url4: list[i].url4,
+            purchase: list[i].purchase 
+        }; 
+            a.push(product); 
+    }
+        var productt={
+        product: a
+        }
+        var accountStr=JSON.stringify(productt);
+        console.log(accountStr); %>
+        <%=accountStr %>
+</body>
+</html>
