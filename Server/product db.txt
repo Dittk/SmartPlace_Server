@@ -1,0 +1,435 @@
+﻿*db 등록 및 설명 사이트
+https://devdhjo.github.io/mysql/2020/01/29/database-mysql-002.html
+
+* 데이터베이스 명 : PRODUCTDB
+
+*
+CREATE TABLE `product` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`url` text,
+`brand_name` varchar(30) NOT NULL,
+`product_name` varchar(50) NOT NULL,
+`price` int(11) NOT NULL,
+`details` text,
+`url2` text,
+`url3` text,
+`url4` text,
+`purchase` text,
+PRIMARY KEY (`id`)
+);
+
+*
+INSERT INTO `product` VALUES 
+(2, 
+'https://i.imgur.com/StPCWkW.jpg#.YkrcHyyxI6U.link',
+'Meister',
+'일반 헤드형 수납 침대', 
+90000,
+'단순성, 견고성, 배치 용이성 높이가 낮아 창문이나 경사진 천장 밑에 놓기 좋으며, 아래쪽에는 수납상자를 위한 공간도 충분합니다. 간단한 몇 단계만으로 조립됩니다.',
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0750212_pe747234_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0772773_pe756126_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0750181_pe747235_s5.jpg?f=s'
+);
+
+*DB연결 오류 해결
+ALTER USER 'ROOT'@'%' IDENTIFIED WITH mysql_native_password BY '1234';
+
+
+
+INSERT INTO `product` VALUES 
+(1, 
+'https://www.ikea.com/kr/ko/images/products/laettsam-baby-bath-white-green__0712337_pe728742_s5.jpg?f=s',
+'Ikea',
+'유아용 욕조', 
+12900,
+'첨벙첨벙! 아이들은 목욕 시간이 즐겁습니다. 
+
+간편하게 옮겨 원하는 곳에 놓을 수 있으며, 아이가 물장구를 쳐도 미끄러지지 않아요.
+ 
+모서리도 부드러워 다칠 염려가 없답니다.',
+'https://www.ikea.com/kr/ko/images/products/laettsam-baby-bath-white-green__0873866_pe611440_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/laettsam-baby-bath-white-green__1048635_pe843802_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/laettsam-baby-bath-white-green__1048634_pe843803_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/laettsam-baby-bath-white-green-20248444/'
+);
+
+INSERT INTO `product` VALUES 
+(2, 
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0749251_pe747239_s5.jpg?f=xxs',
+'GRIMSBU',
+'침대프레임', 
+50000,
+'단순성, 견고성, 배치 용이성 높이가 낮아 창문이나 경사진 천장 밑에 놓기 좋으며,
+ 
+아래쪽에는 수납상자를 위한 공간도 충분합니다. 
+
+간단한 몇 단계만으로 조립됩니다.',
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0750212_pe747234_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0772773_pe756126_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/grimsbu-bed-frame-grey__0750181_pe747235_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/grimsbu-bed-frame-grey-20458757/'
+);
+
+INSERT INTO `product` VALUES 
+(3, 
+'https://cdn.iloom.com/upload/product/20191125/S600_5717208c-4b9c-4b8d-a747-a74a0cab4131.jpg',
+'iLoom',
+'모션베드 캐주얼', 
+2090000,
+'침대에 슬라이딩 책상이 장착되어 
+
+책 읽기, 노트북 작업 등 침대 위에서도 다양한 활동이 가능한 모션베드 캐주얼(책상형)입니다. 
+
+슬라이딩 책상을 끝에 두고 학습 공간을 만들면 별도의 책상 없이도 침대 하나로 수면과 학습이 가능합니다',
+'https://cdn.iloom.com/upload/product/20191125/S200_5717208c-4b9c-4b8d-a747-a74a0cab4131.jpg',
+'https://cdn.iloom.com/upload/productColor/20191125/S200_b2c85896-36b0-45b9-b1c4-0d5c1f224314.jpg',
+'https://cdn.iloom.com/upload/contents/20191125/S600_d676757d-9ae4-4a23-8eed-723ca6eaae08.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HSSE290L'
+);
+
+INSERT INTO `product` VALUES 
+(4, 
+'https://cdn.iloom.com/upload/product/20200713/S600_9b93d7d2-b082-48b4-92d7-7acb79ada22e.jpg',
+'iLoom',
+'600폭 다용도장', 
+349000,
+'책, 화장품 등 다양한 크기의 물품을 수납할 수 있는 다용도장입니다.
+
+거울도어가 부착되어 전신거울로 사용할 수 있습니다.',
+'https://cdn.iloom.com/upload/productColor/20180109/S200_b2aca738-1654-494a-adaa-302c8a78b9e9.jpg',
+'https://cdn.iloom.com/upload/contents/20171031/S1200_93796194-8fae-4876-8594-7e3893f070ec.jpg',
+'https://cdn.iloom.com/upload/contents/20200720/S600_8e1266c1-7651-401a-8ea5-ba0a747959a5.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HSMC067ME'
+);
+
+INSERT INTO `product` VALUES 
+(5, 
+'https://cdn.iloom.com/upload/product/20171011/S600_8ae68a5c-587b-466d-97dc-89b322f0ba91.jpg',
+'iLoom',
+'1800폭 책상', 
+239000,
+'가족 생애 주기 맞춤형 홈라이브러리를 제안하는 리브레 시리즈입니다.
+
+취미생활, 학습, 휴식 등 원하는 타입에 따라 다양한 공간을 꾸며보세요.',
+'https://cdn.iloom.com/upload/productColor/20190709/S200_8bf91422-5435-43c0-98c5-a561635444c8.jpg',
+'https://cdn.iloom.com/upload/productColor/20200827/S200_91aaa821-9345-491b-9817-954cbd7c2d82.jpg',
+'https://cdn.iloom.com/upload/contents/20171011/S1200_a7e3d840-e065-4616-9810-6b85a80afd22.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HSMD018'
+);
+
+INSERT INTO `product` VALUES 
+(6, 
+'https://www.ikea.com/kr/ko/images/products/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey__0175610_pe328883_s5.jpg?f=s',
+'FRIHETEN',
+'수납코너 소파베드', 
+599000,
+'푹 주무셨나요? 
+
+간밤에 사용했던 침실이나 게스트룸이 순식간에 넓은 거실로 변신할 수 있어요. 
+
+빌트인수납장에 침구, 책, 파자마를 담기만 하면 된답니다.',
+'https://www.ikea.com/kr/ko/images/products/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey__0833845_pe603738_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey__0833847_pe604692_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey__0833846_pe604369_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey-s09216755/'
+);
+
+INSERT INTO `product` VALUES 
+(7, 
+'https://www.ikea.com/kr/ko/images/products/svenbertil-chair-with-armrests-white-dietmar-chrome-plated__0729797_pe737159_s5.jpg?f=s',
+'SVENBERTIL',
+'팔걸이 의자 화이트', 
+69900,
+'마음에 드는 하부프레임과 등받이일체형시트를 선택하거나 테이블과 어울리는 조합을 마음껏 만들어보세요. 
+
+아주 다양한 의자 콤비네이션을 만들 수 있어요! 
+
+오목한 시트와 등받이 덕분에 편안하게 앉을 수 있습니다.',
+'https://www.ikea.com/kr/ko/images/products/svenbertil-chair-with-armrests-white-dietmar-chrome-plated__0871829_pe620852_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/svenbertil-chair-with-armrests-white-dietmar-chrome-plated__0871798_pe620792_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/svenbertil-chair-with-armrests-white-dietmar-chrome-plated__0871822_pe620838_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/svenbertil-chair-with-armrests-white-dietmar-chrome-plated-s59201346/'
+);
+
+INSERT INTO `product` VALUES 
+(8, 
+'https://www.ikea.com/kr/ko/images/products/micke-desk-white__0736018_pe740345_s5.jpg?f=s',
+'MICKE',
+'책상, 화이트', 
+119000,
+'어느 인테리어와도 잘 어울리는 간결하고 깔끔한 MICKE/미케 시리즈를 소개합니다. 
+
+다른 책상이나 서랍유닛과 함께 사용해 업무 공간을 넓힐 수도 있어요. 
+
+뒷쪽의 전선인출구에는 케이블을 보이지 않게 정리해보세요.',
+'https://www.ikea.com/kr/ko/images/products/micke-desk-white__0851508_pe565256_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/micke-desk-white__0403463_pe565522_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/micke-desk-white__0851516_pe573416_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/micke-desk-white-80354276/'
+);
+
+INSERT INTO `product` VALUES 
+(9, 
+'https://cdn.iloom.com/upload/productColor/20180109/S200_3286bace-1a1f-4c79-a4eb-5254f8775a79.jpg',
+'iLOOM',
+'스톤 암체어', 
+419000,
+'이탈리아 디자이너 클라우디오 벨리니의 유럽 감성을 담은 스톤 암체어입니다.
+
+ 슬림한 등판 라인과 아담한 디자인으로 다양한 공간(거실, 서재, 침실 등)에 연출이 가능합니다.',
+'https://cdn.iloom.com/upload/product/20171215/S200_950625a2-97b3-4cdf-b171-d15af3134afe.jpg',
+'https://cdn.iloom.com/upload/contents/20170828/S600_1ed6ba76-a93a-420c-92da-f29a70f712a7.jpg',
+'https://cdn.iloom.com/upload/contents/20180219/S600_ac0f0f90-5b1c-4854-a5e4-4112593f8eb9.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HCS5901'
+);
+
+INSERT INTO `product` VALUES 
+(10, 
+'https://www.ikea.com/kr/ko/images/products/brimnes-tv-storage-combination-black__0724176_pe734353_s5.jpg?f=s',
+'BRIMNES',
+'TV수납콤비네이션, 블랙', 
+199800,
+'TV와 함께 두면 거슬리는 것 없이 깔끔해서 즐겨 보는 TV 프로그램에 더욱 빠져들 수 있습니다.
+ 
+큰 서랍에는 게임도구, 리모컨, 액세서리 등을 보관할 수 있으며 
+
+전선은 뒷면의 인출구를 통해 연결할 수 있습니다.',
+'https://www.ikea.com/kr/ko/images/products/brimnes-tv-storage-combination-black__0464267_pe609346_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/brimnes-tv-storage-combination-black__0849973_pe725295_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/brimnes-tv-storage-combination-black__0463167_pe608598_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/brimnes-tv-storage-combination-black-s09228758/'
+);
+
+INSERT INTO `product` VALUES 
+(11, 
+'https://www.ikea.com/kr/ko/images/products/nissafors-trolley-white__0914715_pe784257_s5.jpg?f=s',
+'NISSAFORS',
+'카트, 화이트', 
+32900,
+'어디든 쉽게 옮겨서 사용할 수 있는 카트로 작은 공간을 더 넓게 사용해보세요. 
+
+주방 조리도구나 책상 정리용품, 장갑, 열쇠, 휴대폰 등 
+
+작은 소품을 보관할 수납공간으로도 안성맞춤입니다.',
+'https://www.ikea.com/kr/ko/images/products/nissafors-trolley-white__0914716_pe784258_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/nissafors-trolley-white__0914717_pe784259_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/nissafors-trolley-white__0914718_pe784262_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/nissafors-trolley-white-90465735/'
+);
+
+INSERT INTO `product` VALUES 
+(12, 
+'https://cdn.iloom.com/upload/product/20210511/_24682fdc-081a-470c-bad0-a13dffec7660.jpg',
+'iLOOM',
+'800폭 피넛형 좌식책상', 
+99000,
+'우리 아이의 첫 책상, 피넛형 좌식책상 입니다.
+
+아이의 체형과 안전을 고려한 디자인으로 바른자세를 유지하며 책읽기, 블록놀이 등 다양한 활동을 할 수 있습니다.',
+'https://cdn.iloom.com/upload/contents/20180727/S1200_1e3a7b5e-f14a-48cd-9ce6-1604d9fcd0e5.jpg',
+'https://cdn.iloom.com/upload/contents/20201230/S1200_75d6f107-e0be-418d-9fe5-b44369798948.jpg',
+'https://cdn.iloom.com/upload/contents/20180112/S600_df745c77-3e0a-4c5c-bf13-459e7b7aa027.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HSLD108'
+);
+
+INSERT INTO `product` VALUES 
+(13, 
+'https://cdn.iloom.com/upload/productColor/20201202/S200_fa57d388-1a3a-4afc-9abf-5f3419320cd3.jpg',
+'ILOOM',
+'소파형 리딩하우스', 
+549000,
+'푹신하고 편안한 좌판이 있는 소파형의 리딩하우스로
+
+아이의 편안한 독서, 놀이공간이 되어주고
+
+엄마와의 독서 시간을 가질 수 있는 공간이 되어주는 제품입니다.',
+'https://cdn.iloom.com/upload/product/20201202/S600_f2db0477-2c98-47dc-9a97-932d04c6e0ab.jpg',
+'https://cdn.iloom.com/upload/contents/20201202/S600_a1b72ddc-f3f8-422f-9263-c6686a78b79b.jpg',
+'https://cdn.iloom.com/upload/contents/20201207/S600_5b9d85f4-0079-4ce3-a081-2e5aeed1e2d7.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HSFS090'
+);
+
+INSERT INTO `product` VALUES 
+(14, 
+'https://www.ikea.com/kr/ko/images/products/elvarli-wardrobe-combination-white__0440443_pe592482_s5.jpg?f=s',
+'ELVARLI',
+'옷장콤비네이션, 화이트', 
+365000,
+'ELVARLI/엘발리 수납시스템은 각자 공간에 맞춰서 사용할 수 있습니다. 
+
+튼튼한 대나무 선반으로 만든 오픈 솔루션으로 물건을 예쁘게 정리할 수 있습니다. 
+
+벽에 단단히 고정해주세요.',
+'https://www.ikea.com/kr/ko/images/products/elvarli-wardrobe-combination-white__0856391_pe595867_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/elvarli-wardrobe-combination-white__0855632_pe595868_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/elvarli-wardrobe-combination-white__0855569_pe603429_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/elvarli-wardrobe-combination-white-s49158145/'
+);
+
+INSERT INTO `product` VALUES 
+(15, 
+'https://www.ikea.com/kr/ko/images/products/loberget-malskaer-swivel-chair-white__1078458_pe857202_s5.jpg?f=s',
+'LOBERGET',
+'회전의자', 
+41900,
+'안전바퀴가 압력 감지 잠금 메커니즘을 갖추고 있어 일어나면 안전하게 고정되고, 
+
+앉으면 자동으로 잠금이 해체됩니다.',
+'https://www.ikea.com/kr/ko/images/products/loberget-malskaer-swivel-chair-white__1078478_pe857214_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/loberget-malskaer-swivel-chair-white__1078459_pe857203_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/loberget-malskaer-swivel-chair-white__1078460_pe857204_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/loberget-malskaer-swivel-chair-white-s59445467/'
+);
+
+INSERT INTO `product` VALUES 
+(16, 
+'https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0985179_pe816538_s5.jpg?f=s',
+'UTESPELARE',
+'게이밍 책상, 블랙', 
+149000,
+'3년 품질보증을 제공합니다. 보증서의 약관을 참조하세요.',
+'https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0997777_pe822755_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0997874_pe822843_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/utespelare-gaming-desk-black__0985180_pe816539_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/utespelare-gaming-desk-black-40500350/'
+);
+
+INSERT INTO `product` VALUES 
+(17, 
+'https://cdn.iloom.com/upload/product/20200422/_a3608fa7-b1ab-4c42-ae3c-6784a98683c6.jpg',
+'ILOOM',
+'버니아코(인조)', 
+99000,
+'감성적인 파스텔 컬러와 동물 모양의 재미있는 디테일로 만들어진 키즈소파 버니 아코입니다.
+
+안전한 소재와 디자인, 아이의 성장을 고려한 아코를 우리 아이의 첫번째 소파로 선택해보세요.
+
+아이들이 좋아하는 귀여운 동물 모양의 아코소파는 바른 자세습관을 도와주는 친구가 되어줍니다.',
+'https://cdn.iloom.com/upload/contents/20220427/S600_7ef84e97-e29f-496d-9811-6a587b967bd7.jpg',
+'https://cdn.iloom.com/upload/contents/20220427/S600_0122e5c2-2adf-42ec-ba04-0c817c38591a.jpg',
+'https://cdn.iloom.com/upload/contents/20210428/S600_28a29bb0-2e45-4829-b989-781bf173a823.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HCS4002A'
+);
+
+INSERT INTO `product` VALUES 
+(18, 
+'https://www.ikea.com/kr/ko/images/products/malm-desk-with-pull-out-panel-white__0735980_pe740314_s5.jpg?f=s',
+'MALM',
+'패널 인출식 책상, 화이트', 
+159000,
+'인출식 패널도 작업 공간으로 활용할 수 있습니다.',
+'https://www.ikea.com/kr/ko/images/products/malm-desk-with-pull-out-panel-white__0416083_pe573392_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/malm-desk-with-pull-out-panel-white__0798308_ph165495_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/malm-desk-with-pull-out-panel-white__0798309_ph165496_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/malm-desk-with-pull-out-panel-white-20361152/'
+);
+
+INSERT INTO `product` VALUES 
+(19, 
+'https://www.ikea.com/kr/ko/images/products/markus-office-chair-vissle-dark-grey__0724714_pe734597_s5.jpg?f=s',
+'MARKUS',
+'사무용의자, 다크그레이', 
+199000,
+'의자의 각도와 높이를 마음대로 조절할 수 있어 오랫동안 편하게 앉을 수 있습니다. 
+
+메시 소재의 등받이 덕분에 공기가 잘 순환되어 바쁠 때도 상쾌하게 일할 수 있어요. 
+
+오래 곁에 두고 사용할 수 있도록 튼튼하게 제작된 제품입니다.',
+'https://www.ikea.com/kr/ko/images/products/markus-office-chair-vissle-dark-grey__0399484_pe563517_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/markus-office-chair-vissle-dark-grey__0854850_pe563377_s5.jpg?f=m',
+'https://www.ikea.com/kr/ko/images/products/markus-office-chair-vissle-dark-grey__0398937_pe563107_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/markus-office-chair-vissle-dark-grey-50261151/'
+);
+
+INSERT INTO `product` VALUES 
+(20, 
+'https://www.ikea.com/kr/ko/images/products/forsa-work-lamp-nickel-plated__0609296_pe684433_s5.jpg?f=s',
+'FORSA',
+'독서등, 니켈 도금', 
+29900,
+'스틸 소재의 클래식한 작업등으로 매일을 밝혀보세요. 
+
+조명의 각도를 자유롭게 조절하여 원하는 곳에 빛을 비출 수 있어 
+
+책상과 침대, 소파에서 독서등으로 사용하기 좋습니다.',
+'https://www.ikea.com/kr/ko/images/products/forsa-work-lamp-nickel-plated__0879261_pe614877_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/forsa-work-lamp-nickel-plated__0176855_pe298790_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/forsa-work-lamp-nickel-plated__1028325_ph177481_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/forsa-work-lamp-nickel-plated-50283916/'
+);
+
+INSERT INTO `product` VALUES 
+(21, 
+'https://cdn.iloom.com/upload/productColor/20180312/S200_191194ce-15ab-46f6-86be-dbcfa44881ff.jpg',
+'iLOOM',
+'책상 1500폭', 
+550000,
+'클래식한 분위기와 모던한 디자인의 케플러클래식 책상입니다.
+
+멋스러운 책상 뒷판 디자인과 배선 숨김 기능으로, 책상을 공간의 중앙에 위치시켜 대면형으로 활용하기에 적절한 디자인입니다. 
+
+고급스러운 나뭇결 무늬의 브라운컬러와 시크한 블랙브라운 컬러 매칭으로 세련된 분위기 연출할 수 있습니다..',
+'https://cdn.iloom.com/upload/product/20180312/S600_bb427538-8fc6-4ba2-9ad5-d84c3020272e.jpg',
+'https://cdn.iloom.com/upload/contents/20180312/S600_7fa9b712-2580-4511-b6e5-ad426bd80594.jpg',
+'https://cdn.iloom.com/upload/contents/20180312/S600_e31d461d-2355-4764-ba5c-58365fa882f7.jpg',
+'https://www.iloom.com/product/detail.do?productCd=HSVD015'
+);
+
+INSERT INTO `product` VALUES 
+(22, 
+'https://i.imgur.com/rOW5Roa.png',
+'BAUM(미리보기)',
+'천연면피가죽 4인 소파', 
+1298000,
+'베스트 상품은 언제나 이유가 있죠. 간결한 디자인이 매력적인 바움. 
+
+오리털의 첫 느낌은 포근하고 멀티레이어드 폼으로 입체적인 착석감을 전달합니다. 
+
+반듯함 속의 부드러움을 느껴보세요.',
+'https://sysdesign.co.kr/wp-content/uploads/2019/01/baum_4_04-150x150.jpg',
+'https://i.imgur.com/NpKLDXP.png',
+'https://i.imgur.com/3KUJo1B.png',
+'https://sysdesign.co.kr/shop/sofa/material/leather/baum_4s/'
+);
+
+INSERT INTO `product` VALUES 
+(23, 
+'https://www.ikea.com/kr/ko/images/products/ingo-table-pine__0737092_pe740877_s5.jpg?f=s',
+'INGO(미리보기)',
+'소나무 테이블', 
+79900,
+'무가공 소나무 원목은 내구성이 좋을 뿐만 아니라 원하는 스타일로 
+
+페인트나 오일, 스테인 처리를 할 수 있습니다.',
+'https://www.ikea.com/kr/ko/images/products/ingo-table-pine__0871833_pe594936_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/ingo-table-pine__0251758_pe390539_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/ingo-table-pine__0437150_pe590696_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/ingo-table-pine-60161797/'
+);
+
+INSERT INTO `product` VALUES 
+(24, 
+'https://www.ikea.com/kr/ko/images/products/odger-chair-anthracite__0739669_pe741828_s5.jpg?f=s',
+'ODGER(미리보기)',
+'의자, 앤트러싸이트', 
+99900,
+'따로 공구가 없어도 부품을 끼우기만 하면 간편하게 조립할 수 있습니다.',
+'https://www.ikea.com/kr/ko/images/products/odger-chair-anthracite__1070852_pe854755_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/odger-chair-anthracite__1070851_pe854756_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/odger-chair-anthracite__0963408_ph170906_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/odger-chair-anthracite-30457314/#content'
+);
+
+INSERT INTO `product` VALUES 
+(25, 
+'https://www.ikea.com/kr/ko/images/products/tullsta-armchair-nordvalla-medium-grey__0386142_pe559174_s5.jpg?f=s',
+'TULLSTA(미리보기)',
+'암체어, 미디엄그레이', 
+179000,
+'작은 공간에도 꼭 맞는 넉넉한 마음씨의 소형 암체어입니다.',
+'https://www.ikea.com/kr/ko/images/products/tullsta-armchair-nordvalla-medium-grey__0837583_pe601029_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/tullsta-armchair-nordvalla-medium-grey__0837572_pe585809_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/images/products/tullsta-armchair-nordvalla-medium-grey__0431827_pe585855_s5.jpg?f=s',
+'https://www.ikea.com/kr/ko/p/tullsta-armchair-nordvalla-medium-grey-s39284663/#content'
+);
+
